@@ -5,6 +5,43 @@ interface ObjTy {
   [propName: string]: any
 }
 
+/*axios req request configuration*/
+import { AxiosRequestConfig } from 'axios'
+interface AxiosReqTy extends AxiosRequestConfig {
+  url?: string
+  method?: string
+  data?: ObjTy
+  metadata?: ObjTy
+  isParams?: boolean
+  fullPageLoading?: boolean
+  autoHideFullPageLoading?: boolean
+  isUploadFile?: boolean
+  isDownLoadFile?: boolean
+  isAlertErrorMsg?: boolean
+  baseURL: string
+  timeout?: number
+  attachmentType?: string
+}
+
+interface AxiosConfigTy {
+  url?: string
+  metadata?: ObjTy
+  method?: string
+  data?: ObjTy
+  params?: ObjTy
+  msg?: string
+  isParams?: boolean
+  fullPageLoading?: boolean
+  autoHideFullPageLoading?: boolean
+  isUploadFile?: boolean
+  isDownLoadFile?: boolean
+  isAlertErrorMsg?: boolean
+  baseURL?: string
+  timeout?: number
+  attachmentType?: string
+  controller?: AbortController
+}
+
 interface SettingTy {
   title: string
   sidebarLogo: boolean
