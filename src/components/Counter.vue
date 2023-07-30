@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import {useDateCounter} from '@/composables/useDateCounter';
 
-const formatDate = (timestamp) => {
+const formatDate = (timestamp: number) => {
   const date = new Date(timestamp);
   const options = {year: 'numeric' as const, month: 'short' as const, day: '2-digit' as const};
   return date.toLocaleDateString('en-US', options);
 }
-const inputDate = ref(new Date("Aug 2, 2023 00:00:00").getTime());
-const {remainingTime} = useDateCounter(new Date(inputDate.value));
+const inputDate = ref<Date>(new Date("Aug 2, 2023 00:00:00"));
+const {remainingTime} = useDateCounter(new Date(inputDate.value.getTime()));
 </script>
 <template>
   <div class="counter">
@@ -26,7 +26,7 @@ const {remainingTime} = useDateCounter(new Date(inputDate.value));
       </div>
       <div class="element">
         <p class="element__caption">ENDS</p>
-        <p class="element__body">{{ formatDate(inputDate) }}</p>
+        <p class="element__body">{{ formatDate(inputDate.getTime()) }}</p>
       </div>
     </div>
   </div>
