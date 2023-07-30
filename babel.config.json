@@ -1,0 +1,9 @@
+{
+  "plugins": [
+    [
+      {
+        "languages": ["json", "log"]
+      }
+    ]
+  ]
+}

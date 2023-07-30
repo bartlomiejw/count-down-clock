@@ -1,0 +1,61 @@
+// tailwind import
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// colors
+$gradient: linear-gradient(180deg, #FFF 0%, #F3F5F9 100%);
+$btnColor: #4D94FF;
+$textColor: #20334F;
+$white: #fff;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+$fontFamily: 'Open Sans', sans-serif;
+
+.text-heading {
+  color: $textColor;
+  font-family: $fontFamily;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.text-description {
+  color: $textColor;
+  font-family: $fontFamily;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+// components
+.btn {
+  display: block;
+  color: $white;
+  border-radius: 4px;
+  background: $btnColor;
+  box-shadow: 0 23px 23px -13px rgba(48, 95, 150, 0.23);
+  padding: 18px 48px;
+  text-align: center;
+  transition: margin-bottom 0.3s ease-in-out;
+
+  &:hover {
+    margin-bottom: 5px;
+  }
+}
+
+body {
+  background: no-repeat $gradient;
+}
+
+a {
+  color: $btnColor;
+  font-family: $fontFamily;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
